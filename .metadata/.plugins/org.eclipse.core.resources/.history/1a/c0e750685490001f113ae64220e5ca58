@@ -1,0 +1,42 @@
+package demoblaze2;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class browserindustry {
+	
+	public static WebDriver startapplication(WebDriver driver,String browserName,String appurl) {
+		
+		if (browserName.equals("Chrome")) {
+			driver = new ChromeDriver();
+		}
+		else if (browserName.equals("Edge")) {
+			driver =new EdgeDriver();
+		}
+		else if (browserName.equals("FireFox")) {
+			driver= new FirefoxDriver();
+		}
+	// timeout-
+	// pageload timeunit -driver ko wait karna jab tak puri treke se page load na ho jye .
+		// hai itna time lgega page open hone mai  dirver ko wait karna hota ha jabtak load na ho jye 	
+		driver.manage().timeouts().pageLoadTimeout(50,TimeUnit.SECONDS);
+		driver.manage().window().maximize();
+		driver.get(appurl);
+
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+				
+		return driver;
+	}
+
+	public static void quitbrowser(WebDriver driver) {
+		driver.close();
+	}
+		
+	}
+
+
+

@@ -1,0 +1,21 @@
+package demoblaze1;
+
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+import demoblaze.basedclass;
+import demoblaze.loginpageing;
+
+public class demologin extends basedclass {
+	
+	@Test
+	public void signupapp() {
+		
+		loginpageing Loginpageing =PageFactory.initElements(driver, loginpageing.class);
+		Loginpageing.loginTodemoblaze("Shubhamtom93","123456");
+		
+	}
+	
+	
+
+}

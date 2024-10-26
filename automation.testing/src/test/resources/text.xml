@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Build_1">
+  <classes>
+  <class name ="parllelexecutionsaucelabs.sauce_lab_add_to_cart">
+  <methods>
+  <include name="add_to_cart"></include>
+   </methods>
+  </class>
+  
+  <class name="parllelexecutionsaucelabs.sauce_lab_filter">
+  <methods>
+  <include name="filter"></include>
+  </methods>
+  </class>
+  
+  <class name="parllelexecutionsaucelabs.sauce_lab_product_purchase">
+  <methods>
+  <include name="checkout"></include>
+  </methods>
+  </class>
+ 	
+  <class name="parllelexecutionsaucelabs.suacelabremovetocart">
+  <methods>
+  <include name="remove_from_cart"></include>
+  </methods>
+  </class>
+  </classes>
+ 
+ </test> <!-- Test -->
+</suite> <!-- Suite -->
+ 	
+ 	
+ 	
+ 	
+ 	
+ 	
+ 
+	
